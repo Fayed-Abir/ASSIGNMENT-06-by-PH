@@ -6,6 +6,7 @@
     <title>Green Earth Plant Store : power by Abir</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+     
 </head>
 <body class="bg-[#F0FDF4]">
     <!-- Navbar Section -->
@@ -18,14 +19,14 @@
           
          <div id="nav-menu" class="flex justify-center items-center">
             <ul class="flex gap-3 text-lg">
-                <li class="text-white">About</li>
-                <li class="text-white">Gallery</li>
-                <li class="text-white">Plant a Tree</li>
+                <li class="text-white"><a href="http://#">About</a></li>
+                <li class="text-white"><a href="http://#">Gallery</a></li>
+                <li class="text-white"><a href="http://#">Plant a Tree</a></li>
             </ul>
           </div>
 
-          <button id="btn-nav" class="bg-[#FACC15] mr-[155px] px-5 h-[60%] my-auto rounded-3xl">
-              <p class="text-[#15803D] text-xl">Plant a Tree</p>
+          <button id="btn-nav" class="bg-[#FACC15] mr-[155px] px-5 h-[60%] my-auto rounded-3xl text-[#15803D] text-xl">
+              Plant a Tree
           </button>
           
        </div>
@@ -47,31 +48,31 @@
       </section>
 
       <!-- Categories -->
-      <section id="choose-your-trees" class="bg-[#F0FDF4] w-[85%] mx-auto flex flex-col mt-24 ">
+      <section id="choose-your-trees" class="bg-[#F0FDF4] w-[85%] mx-auto flex flex-col mb-12 mt-24 ">
         <h2 class="text-[2rem] font-semibold text-center mb-9 mx-auto">Choose Your Trees</h2>
         <div class="flex">
                  <div id="catagories" class="w-[15.15%]">
           <h2 class="font-bold mb-4">Categories</h3>
-          <ul class="pl-2 flex flex-col gap-4">
-            <li>All Trees</li>
-            <li>Fruit Trees</li>
-            <li>Flower Trees</li>
-            <li>Shade Trees</li>
-            <li>Medicinal Trees</li>
-            <li>Timber Trees</li>
-            <li>Evergreen Trees</li>
-            <li>Ornamental Trees</li>
-            <li>Bamboo</li>
-            <li>Climbers</li>
-            <li>Aquatic Plants </li>
-          </ul>
+          <div id="category-container"  class="pl-2 flex flex-col gap-4 items-start">
+            
+            <!-- <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Fruit Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Flower Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Shade Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Medicinal Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Timber Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Evergreen Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Ornamental Trees</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Bamboo</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Climbers</button>
+            <button class="hover:bg-[#2ccf68] rounded-lg w-full text-left p-2">Aquatic Plants </button> -->
+          </div>
         </div>
 
         <!-- Cards Section -->
-        <div id="cards" class="grid grid-cols-3 w-[66%] gap-[2.75%] mx-auto">
+        <div id="card-container" class="grid grid-cols-3 w-[66%] gap-[2.75%] mx-auto">
            
-          <div id="card-1" class="flex flex-col p-4  gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
+          <div id="card" class="flex flex-col p-4  gap-2 bg-white">
+              <img src="" alt="" class="md:w-[312px] md:[187px] mx-auto">
               <h2 class="text-[14px] font-semibold">Mango Trees</h2>
               <p class="text-[12px]">
                 A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
@@ -81,67 +82,7 @@
                   <p>৳500</p>
                 </div>
                 <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
-          <div id="card-1" class="flex flex-col  p-4  gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
-              <h2 class="text-[14px] font-semibold">Mango Trees</h2>
-              <p class="text-[12px]">
-                A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
-              </p>
-                <div class="flex flex-row justify-between items-center">
-                  <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
-                  <p>৳500</p>
-                </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
-          <div id="card-1" class="flex flex-col  p-4 gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
-              <h2 class="text-[14px] font-semibold">Mango Trees</h2>
-              <p class="text-[12px]">
-                A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
-              </p>
-                <div class="flex flex-row justify-between items-center">
-                  <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
-                  <p>৳500</p>
-                </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
-          <div id="card-1" class="flex flex-col  p-4 gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
-              <h2 class="text-[14px] font-semibold">Mango Trees</h2>
-              <p class="text-[12px]">
-                A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
-              </p>
-                <div class="flex flex-row justify-between items-center">
-                  <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
-                  <p>৳500</p>
-                </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
-          <div id="card-1" class="flex flex-col  p-4 gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
-              <h2 class="text-[14px] font-semibold">Mango Trees</h2>
-              <p class="text-[12px]">
-                A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
-              </p>
-                <div class="flex flex-row justify-between items-center">
-                  <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
-                  <p>৳500</p>
-                </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
-          <div id="card-1" class="flex flex-col  p-4 gap-2 bg-white">
-              <img src="/assets/mango.png" alt="" class="md:w-[312px] md:[187px] mx-auto">
-              <h2 class="text-[14px] font-semibold">Mango Trees</h2>
-              <p class="text-[12px]">
-                A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
-              </p>
-                <div class="flex flex-row justify-between items-center">
-                  <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
-                  <p>৳500</p>
-                </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-            </div>
+          </div>
  
         </div>
 
@@ -159,7 +100,7 @@
 
 
       <!-- The Campaign -->
-       <section id="the-campaign" class="w-[56.76%] mx-auto mt-24">
+       <section id="the-campaign" class="w-[56.76%] mx-auto mb-16 mt-24">
           <h2 class="text-[2rem] font-semibold mx-auto text-center">About The Campaign</h2>
           
           <div id="campaign-bigPart" class="flex flex-row mt-10">
@@ -212,7 +153,7 @@
          <section id="form-section" class="bg-[#166534] w-full h-[591px] flex flex-col justify-center items-center">
             <h2 class="text-[2rem] font-semibold text-white text-center">Plant a Tree Today</h2>
            
-            <div id="form-parent" class="bg-[#15803D] w-[33.85%] h-[311px] mx-auto p-10 flex flex-col justify-between items-center rounded-lg mt-10">
+            <div id="form-parent" class="bg-[#15803D] w-[650px] h-[311px] mx-auto p-10 flex flex-col justify-between items-center rounded-lg mt-10">
                 <form id="form" class="">
                    <input type="text" name="Your Name" id="your-name" placeholder="Your Name" class="bg-white mx-auto w-[570px] h-[48px] rounded-lg text-left p-2 text-[1rem] mb-3">
                    <input type="email" name="email" id="email" placeholder="Your Email Address" class="bg-white mx-auto w-[570px] h-[48px] rounded-lg text-left p-2 text-[1rem] mb-3" >
@@ -226,17 +167,21 @@
               </select>
 
       
-      <button type="submit" class="bg-[#FACC15] text-[#166534] font-semibold text-lg w-full h-[48px] rounded-3xl    mt-4 hover:bg-yellow-400 transition">Donate Now
-      </button>
-                </form>
-            </div>
+            <button type="submit" class="bg-[#FACC15] text-[#166534] font-semibold text-lg w-full h-[48px] rounded-3xl    mt-4 hover:bg-yellow-400 transition">Donate Now
+            </button>
+         </form>
+      </div>
+   </section>
 
-         </section>
 
-</body>
-
-        <!-- Footer section -->
+    <!-- Footer section -->
          <footer class="bg-[#14532D] w-full h-[72px] flex justify-center items-center">
             <h3 class="text-[1rem] font-light text-center text-white">© 2025 Green Earth. All Rights Reserved.</h3>
          </footer>
+                    
+         <script src="tree-script.js"></script>
+</body>
+
+       
+        
 </html> 
