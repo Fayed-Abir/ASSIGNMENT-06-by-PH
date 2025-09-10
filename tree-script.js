@@ -1,3 +1,11 @@
+const loadAllPlants = () => {
+    fetch("https://openapi.programming-hero.com/api/plants")
+    .then(res => res.json())
+    .then(json => displayCategoryPlant(json.plants))
+}
+
+
+
 const loadCategories = () => {
     fetch("https://openapi.programming-hero.com/api/categories")
     .then(res => res.json())
@@ -19,33 +27,15 @@ const displayCategoryPlant = (plants) => {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
 
-//     category
-// : 
-// "Fruit Tree"
-// description
-// : 
-// "A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green canopy offers shade, while its sweet fruits are rich in vitamins and minerals."
-// id
-// : 
-// 1
-// image
-// : 
-// "https://i.ibb.co.com/cSQdg7tf/mango-min.jpg"
-// name
-// : 
-// "Mango Tree"
-// price
-// : 
-// 500
 
     plants.forEach(plant => {
         console.log(plant)
         const card = document.createElement("div")
         card.innerHTML = `
-       <div id="card" class="flex flex-col p-4 max-h-full gap-2 bg-white">
-              <img src="${plant.image}" alt="" class="md:w-[312px] h-full mx-auto">
+       <div  class="flex flex-col p-4  gap-2 bg-white shadow-sm rounded-lg">
+              <img src="${plant.image}" alt="" class="md:w-[312px] h-52 mx-auto object-cover overflow-hidden">
               <h2 class="text-[14px] font-semibold">${plant.name}</h2>
-              <p class="text-[12px]">
+              <p class="text-[12px] max-h-[3.5rem] overflow-hidden">
                 ${plant.description}
               </p>
                 <div class="flex flex-row justify-between items-center">
@@ -80,3 +70,4 @@ const displayCategories = (categories) => {
 
 
 loadCategories();
+loadAllPlants()
