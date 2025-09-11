@@ -14,18 +14,18 @@
        <div id="navbar-parent" class="bg-[#15803D] md:h-[91px] flex justify-between mx-auto" >
          
          <div id="brand-name" class="ml-[135px] flex  justify-center items-center">
-            <p class="text-white text-3xl">Green Earth</p>
+            <p class="text-white text-3xl"><a href="#">Green Earth</a></p>
          </div>
           
          <div id="nav-menu" class="flex justify-center items-center">
             <ul class="flex gap-3 text-lg">
-                <li class="text-white"><a href="http://#">About</a></li>
-                <li class="text-white"><a href="http://#">Gallery</a></li>
-                <li class="text-white"><a href="http://#">Plant a Tree</a></li>
+                <li class="text-white hover:border-b-2"><a href="http://#">About</a></li>
+                <li class="text-white hover:border-b-2"><a href="http://#">Gallery</a></li>
+                <li class="text-white hover:border-b-2"><a href="http://#">Plant a Tree</a></li>
             </ul>
           </div>
 
-          <button id="btn-nav" class="bg-[#FACC15] mr-[155px] px-5 h-[60%] my-auto rounded-3xl text-[#15803D] text-xl">
+          <button id="btn-nav" class="bg-[#FACC15] mr-[155px] px-5 h-[60%] my-auto rounded-3xl text-[#15803D] text-xl hover:bg-[#ffe88c] hover:cursor-pointer">
               Plant a Tree
           </button>
           
@@ -39,7 +39,7 @@
         <div id="banner-text" class="flex flex-col gap-3">
           <h1 id="banner-heading" class="md:text-[3rem] font-bold">Plant a Tree, Grow a Future</h1>
           <p id="banner-para" class="text-center">Join our mission to plant 1 million trees and make the Earth greener for future <br> generations.</p>
-          <button id="banner-btn" class= "mx-auto bg-[#FACC15] rounded-3xl py-2 px-5 text-[#15803D]">
+          <button id="banner-btn" class= "mx-auto bg-[#FACC15] rounded-3xl py-2 px-5 text-[#15803D] hover:bg-[#ffe88c] hover:cursor-pointer">
             Get Involved
           </button>
         </div>
@@ -51,7 +51,7 @@
       <section id="choose-your-trees" class="bg-[#F0FDF4] w-[85%]  mx-auto flex flex-col mb-12 mt-24 ">
         <h2 class="text-[2rem] font-semibold text-center mb-9 mx-auto">Choose Your Trees</h2>
         <div class="flex items-start gap-6 flex-wrap">
-                 <div id="catagories" class="w-[15.15%]">
+                 <div id="catagories" class="md: max-w-[15.15%]">
           <h2 class="font-bold mb-4">Categories</h3>
           <div id="category-container"  class="pl-2 flex flex-col gap-4 ">
             
@@ -64,7 +64,7 @@
         <!-- Cards Section -->
         <div id="card-container" class="grid grid-cols-3  w-[66%] gap-x-6 gap-y-4 mx-auto items-start overflow-hidden ">
            
-          <!-- <div id="card" class="flex flex-col p-4  gap-2 bg-white">
+           <!-- <div id="card" class="flex flex-col p-4  gap-2 bg-white"> 
               <img src="img" alt="" class="md:w-[312px] md:[187px] mx-auto">
               <h2 class="text-[14px] font-semibold">Mango Trees</h2>
               <p class="text-[12px]">
@@ -74,9 +74,9 @@
                   <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">Fruit Trees</button>
                   <p>৳500</p>
                 </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl">Add to Cart</button>
-          </div> -->
- 
+                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl hover:bg-[#2ccf68] ">Add to Cart</button>
+          </div> 
+  -->
         </div>
 
 
@@ -119,7 +119,7 @@
        <!-- Impact Section -->
         <section id="our-impact" class="bg-[#CFF0DC] pt-17 md:h-[436px]">
 
-          <h2 class="text-[2rem] font-bold text-center  mb-[40px]">Our Impact</h2>
+          <h2 class="text-[2rem] font-bold text-center  mb-[40px] text-green-800">Our Impact</h2>
 
           <div id="impact-cards" class="flex  justify-between items-center px-[6.03%] ">
 
@@ -173,6 +173,37 @@
          </footer>
                     
          <script src="tree-script.js"></script>
+
+
+
+<!-- <dialog id="my_modal_1" class="modal modal-middle sm:modal-middle">  -->
+    <!-- <div class="modal-box mx-auto flex flex-col justify-center items-center bg-white  rounded-xl border-3 border-red-500">
+    <div id="details-container" class="p-4 mx-auto  rounded-xl">
+             <h3 class="text-lg font-bold">${plant.name}</h3>
+             <img src="/assets/mango.png" alt="" class="h-48 w-48 my-3">
+              <p class="py-2"><span class="font-bold">Category:</span>${plant.category_name}</p>
+             <p class="py-2"><span class="font-bold">Price:</span>৳${plant.price}</p>
+             <p class="py-2"><span class="font-bold">Description:</span>${plant.description}</p>
+             <div class="modal-action flex justify-end">
+               <form method="dialog" class="mt-2">
+                
+                 <button class="btn flex justify-end hover:bg-gray-200 hover:cursor-pointer px-2 py-1 shadow-sm border-1  border-gray-200 rounded-lg">Close</button>
+               </form>
+             </div>
+    </div>
+  </div> -->
+<!-- </dialog>  -->
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> --> 
+ <dialog id="my_modal_5" class="modal  modal-middle w-[30vw] h-[50vh] my-auto mx-auto rounded-lg">
+  <div class="modal-box">
+    <div id="details-container" class="p-4 mx-auto  rounded-xl">
+         
+    </div>
+  </div>
+</dialog>  ;
+
 </body>
 
        
