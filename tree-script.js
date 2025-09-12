@@ -19,6 +19,7 @@ const loadDetailModal = async(id)=>{
     const res = await fetch(url);
     const details = await res.json();
    displayDetailModal(details.plants);
+   
 }
 
 const displayDetailModal =(plant)=>{
@@ -26,10 +27,10 @@ const displayDetailModal =(plant)=>{
    const detailsBox = document.getElementById("details-container");
    detailsBox.innerHTML = `
         <h3 class="text-lg font-bold">${plant.name}</h3>
-             <img src="${plant.image}" alt="" class=" my-3 mx-auto h-[26vh] w-full object-cover rounded-lg">
-              <p class="py-2"><span class="font-bold">Category: </span>${plant.category}</p>
-             <p class="py-2"><span class="font-bold">Price: </span>৳${plant.price}</p>
-             <p class="py-2"><span class="font-bold">Description: </span>${plant.description}</p>
+             <img src="${plant.image}" alt="${plant.name}" class=" my-3 mx-auto h-[26vh] w-full object-cover rounded-lg">
+              <p class="py-2 text-[1rem] "><span class="font-bold text-[1rem]">Category: </span>${plant.category}</p>
+             <p class="py-2  text-[1rem]"><span class="font-bold text-[1rem]">Price: </span>৳${plant.price}</p>
+             <p class="py-2  text-[1rem]"><span class="font-bold text-[1rem]">Description: </span>${plant.description}</p>
              <div class="modal-action flex justify-end">
                <form method="dialog" class="mt-2">
                 
@@ -66,12 +67,59 @@ const displayCategoryPlant = (plants) => {
                   <button class="bg-[#bffad4] text-green-800 font-semibold rounded-3xl px-3 py-1 text-center ">${plant.category}</button>
                   <p class="text-green-800 font-bold">৳${plant.price}</p>
                 </div>
-                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl hover:bg-[#2ccf68] hover:cursor-pointer">Add to Cart</button>
+                <button class="bg-[#15803D] mx-auto text-white w-full py-1 rounded-3xl hover:bg-[#2ccf68] hover:cursor-pointer" onclick="addToCart('${plant.name}','${plant.price}')">Add to Cart</button>
           </div>
         `;
         cardContainer.append(card);
     });
 }
+
+
+let totalPrice = 0; // track total price
+
+// Update total price display
+const updateTotalPrice = () => {
+  const totalDiv = document.getElementById("cart-total");
+
+  if (totalPrice > 0) {
+    totalDiv.innerHTML = `<p>Total: ৳${totalPrice}</p>`;
+  } else {
+    totalDiv.innerHTML = ""; // clear when no items
+  }
+};
+
+// Add item to cart
+const addToCart = (name, price) => {
+  const cartItems = document.getElementById("cart-items");
+
+  // Create item div
+  const itemDiv = document.createElement("div");
+  itemDiv.id = name;
+  itemDiv.className = "flex justify-between items-center mb-2";
+  itemDiv.innerHTML = `
+    <p class="text-[.875rem] font-semibold">${name}</p>
+    <div class="flex gap-2 items-center">
+      <p class="text-[.875rem]">৳${price}</p>
+      <button onclick="removeFromCart('${name}', ${price})" class="text-red-600 font-bold">x</button>
+    </div>
+  `;
+
+  cartItems.appendChild(itemDiv);
+   let addPrice = Number(price)
+  // Update total
+  totalPrice += addPrice;
+  updateTotalPrice();
+};
+
+// Remove item from cart
+const removeFromCart = (name, price) => {
+  const itemDiv = document.getElementById(name);
+  if (itemDiv) {
+    itemDiv.remove();
+    totalPrice -= price;
+    updateTotalPrice();
+  }
+};
 
 const displayCategories = (categories) => {
     // 1. Get the container & Empty that
@@ -90,6 +138,7 @@ const displayCategories = (categories) => {
 
 
 }
+
 
 //  Modal Codes 
 //   Open the modal using ID.showModal() method -->
